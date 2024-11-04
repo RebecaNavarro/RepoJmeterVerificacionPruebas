@@ -1,0 +1,2 @@
+# JMeter generated Authorization file
+https://todo.ly	tareajmeterptoken@2024.com	12345			BASIC
