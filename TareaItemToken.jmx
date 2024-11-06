@@ -20,7 +20,7 @@
         </elementProp>
       </ThreadGroup>
       <hashTree>
-        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="ConvertToBase64" enabled="true">
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="ConvertToBase64">
           <stringProp name="BeanShellSampler.query">import org.apache.commons.codec.binary.Base64;
 
 String email = &quot;tareajmeter@2024.com&quot;;
@@ -35,7 +35,7 @@ vars.put(&quot;AUTH_TOKEN&quot;, new String(base64Auth));
 log.info(&quot;Encoded Base64 Auth Token: &quot; + new String(base64Auth));</stringProp>
         </BeanShellSampler>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get Token" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get Token">
           <stringProp name="TestPlan.comments">https://todo.ly/api/authentication/token.format</stringProp>
           <stringProp name="HTTPSampler.domain">todo.ly</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -49,7 +49,7 @@ log.info(&quot;Encoded Base64 Auth Token: &quot; + new String(base64Auth));</str
           </elementProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
             <collectionProp name="HeaderManager.headers">
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">Authorization</stringProp>
@@ -58,14 +58,14 @@ log.info(&quot;Encoded Base64 Auth Token: &quot; + new String(base64Auth));</str
             </collectionProp>
           </HeaderManager>
           <hashTree/>
-          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="get token variable" enabled="true">
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="get token variable">
             <stringProp name="JSONPostProcessor.referenceNames">TOKEN</stringProp>
             <stringProp name="JSONPostProcessor.jsonPathExprs">.TokenString</stringProp>
             <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
           </JSONPostProcessor>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create Item" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create Item">
           <stringProp name="TestPlan.comments">https://todo.ly/api/projects.format</stringProp>
           <stringProp name="HTTPSampler.domain">todo.ly</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -87,7 +87,7 @@ log.info(&quot;Encoded Base64 Auth Token: &quot; + new String(base64Auth));</str
           </elementProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
             <collectionProp name="HeaderManager.headers">
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">Token</stringProp>
@@ -96,14 +96,14 @@ log.info(&quot;Encoded Base64 Auth Token: &quot; + new String(base64Auth));</str
             </collectionProp>
           </HeaderManager>
           <hashTree/>
-          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Get ID item" enabled="true">
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Get ID item">
             <stringProp name="JSONPostProcessor.referenceNames">ID_ITEM</stringProp>
             <stringProp name="JSONPostProcessor.jsonPathExprs">.Id</stringProp>
             <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
             <stringProp name="JSONPostProcessor.defaultValues">ERROR there is not id project</stringProp>
           </JSONPostProcessor>
           <hashTree/>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Verify response code" enabled="true">
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Verify response code">
             <collectionProp name="Asserion.test_strings">
               <stringProp name="49586">200</stringProp>
             </collectionProp>
@@ -113,7 +113,7 @@ log.info(&quot;Encoded Base64 Auth Token: &quot; + new String(base64Auth));</str
             <intProp name="Assertion.test_type">8</intProp>
           </ResponseAssertion>
           <hashTree/>
-          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion">
             <stringProp name="JSON_PATH">.Content</stringProp>
             <stringProp name="EXPECTED_VALUE">Item1</stringProp>
             <boolProp name="JSONVALIDATION">true</boolProp>
@@ -122,11 +122,11 @@ log.info(&quot;Encoded Base64 Auth Token: &quot; + new String(base64Auth));</str
             <boolProp name="ISREGEX">true</boolProp>
           </JSONPathAssertion>
           <hashTree/>
-          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Duration Assertion" enabled="true">
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Duration Assertion">
             <stringProp name="DurationAssertion.duration">5000</stringProp>
           </DurationAssertion>
           <hashTree/>
-          <SizeAssertion guiclass="SizeAssertionGui" testclass="SizeAssertion" testname="Size Assertion" enabled="true">
+          <SizeAssertion guiclass="SizeAssertionGui" testclass="SizeAssertion" testname="Size Assertion">
             <stringProp name="Assertion.test_field">SizeAssertion.response_network_size</stringProp>
             <stringProp name="SizeAssertion.size">500</stringProp>
             <intProp name="SizeAssertion.operator">3</intProp>
@@ -174,7 +174,7 @@ log.info(&quot;Encoded Base64 Auth Token: &quot; + new String(base64Auth));</str
           </JSONPathAssertion>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Read Item">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Read Item" enabled="true">
           <stringProp name="TestPlan.comments">https://todo.ly/api/projects/[id].format</stringProp>
           <stringProp name="HTTPSampler.domain">todo.ly</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -207,7 +207,7 @@ log.info(&quot;Encoded Base64 Auth Token: &quot; + new String(base64Auth));</str
           </JSONPathAssertion>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Delete Item">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Delete Item" enabled="true">
           <stringProp name="TestPlan.comments">https://todo.ly/api/projects/[id].format</stringProp>
           <stringProp name="HTTPSampler.domain">todo.ly</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -249,7 +249,7 @@ log.info(&quot;Encoded Base64 Auth Token: &quot; + new String(base64Auth));</str
           </JSONPathAssertion>
           <hashTree/>
         </hashTree>
-        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
             <name>saveConfig</name>
